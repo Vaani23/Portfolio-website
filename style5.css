@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+}
+body,html{
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	line-height: 1.4;
+	scroll-behavior: smooth;
+	color: black;
+}
+body{
+	font-size: 1.4rem;
+}
+.container{
+	max-width: 1300px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+ul{
+	list-style: none;
+}
+header{
+	background: blue;
+}
+nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+}
+nav ul{
+	display: flex;
+    gap: 1.5rem;
+
+}
+nav li{
+	font-size: 2rem;
+	border-bottom: 0.4rem transparent solid;
+	transition: 0.3s ease-in-out;
+}
+nav li:hover{
+    border-bottom: 0.4rem yellow solid;
+    transition: 0.3s ease-in-out;
+}
+.logo{
+	font-size: 5rem;
+	font-weight: 700;
+}
+#hero{
+	background: lightblue;
+	padding: 4rem 0;
+	border-bottom: 4px solid grey;
+
+}
+#hero .container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.hero_content{
+	display: grid;
+	place-items: center;
+}
+#hero h1{
+	font-size: 3rem;
+	font-weight: bold;
+}
+.hi_text{
+	font-size: 6rem;
+	font-weight: bold;
+	color: orange;
+}
+.name_text{
+	font-size: 5rem;
+}
+#hero h2{
+	font-size: 4rem;
+	font-weight: bold;
+	overflow: hidden;
+	border-right: 0.15em orange solid;
+	white-space: nowrap;
+	margin: 0 auto;
+	animation: typing 5s steps(40,end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+	from{
+		width: 0;
+	}
+	to {
+		width: 70%;
+	}
+}
+@keyframes blink-caret {
+	from,
+	to{
+	border-color: transparent;
+	}
+	50% {
+		border-color: orange;
+	}
+}
+#project{
+	background-color: lightblue;
+
+	border-bottom: 4px solid grey;
+}
+#project h2{
+	font-size: 6rem;
+	text-align: center;
+
+}
+.project_container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+	gap: 2rem;
+}
+.grid-item{
+	display: grid;
+	place-items: center;
+}
+.card_content{
+	font-size: 30px;
+	padding: 2rem;
+	position: relative;
+	top: -6.5rem;
+	margin-bottom: -6.5rem;
+	transition: 0.5s ease-in-out;
+	transform: translateY(100px);
+}
+.card:hover .card_content{
+	background: black;
+	color: white;
+	transform: translateY(0px);
+}
+.card{
+	border-radius: 0.5rem;
+	overflow: hidden;
+	transition: 0.2s ease-in-out;
+}
+.card:hover{
+	transform: scale(1.05);
+	transition: 1s ease-in-out;
+}
+.card:hover img{
+	transform: scale(1.05);
+	transition: 0.3s ease-in-out;
+	opacity: 0.8;
+}
+.card_content h3{
+ text-align: center;
+}
+#Description{
+	background-color: lightblue;
+	
+}
+#Description h2{
+	font-size: 6rem;
+	text-align: center;
+	}
+.Description_container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+	gap: 2rem;
+}
+.grid-item1{
+	display: grid;
+	place-items: center;
+	justify-content: center;
+}
+.card_content1{
+	justify-content: center;
+}
+.card1{
+	border-radius: 0.5rem;
+	overflow: hidden;
+	transition: 0.2s ease-in-out;
+}
+.card1:hover{
+	transform: scale(1.05);
+	transition: 1s ease-in-out;
+}
+.card1:hover img{
+	transform: scale(1.05);
+	transition: 0.3s ease-in-out;
+	opacity: 0.8;
+}
+#Description{
+	background-color: lightblue;
+
+	border-bottom: 4px solid grey;
+}
+#contact{
+	background-color: lightblue;
+	border-bottom: 4px solid grey;
+
+}
+#contact h2{
+	font-size: 6rem;
+	text-align: center;
+	
+}
+#contact .container{
+	height: 300px;
+	justify-content: center;
+	gap: 4rem;
+
+}
+.top_contact{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	justify-content: center;
+	margin: 0 auto;
+}
+.contact_way{
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+}
+.contact_way h3{
+	font-size: 3rem;
+	font-weight: bold;
+}
+.bottom_contact{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+	justify-content: center;
+	margin: 0 auto;
+	gap: 1rem;
+}
+.container4{
+	background-color: lightblue;
+	padding: 2rem;
+	color: black;
+   font-size: 40px;
+   text-align: center;
+}
+@media(max-width: 786px){
+	html{
+		font-size: 40%;
+	}
+	#hero .container{
+		flex-direction: column;
+	}
+	.hero_image{
+		display: grid;
+		place-items: center;
+	}
+		#contact .container{
+		height: 70vh;
+	}
+}
+@media(max-width: 500px){
+	html{
+		font-size: 32%;
+	}
+	#hero .container{
+		flex-direction: column;
+	}
+	.hero_image{
+		display: grid;
+		place-items: center;
+	}
+	#contact .container{
+		height: 50vh;
+	}
+}
